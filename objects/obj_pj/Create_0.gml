@@ -1,19 +1,21 @@
 // Variables about moving
-hsp = 0;
-vsp = 0;
-grv = 0.6;
-walksp = 4;
-jumpsp = 9;
 right = 0;
 left = 0;
 space = 0;
 
+hsp = 0;
+walksp = 4;
+var _jumping;
+
+grv = 0.6;
+vsp = 0;
+jumpsp = 9;
+var _move;
+
 // Status player
 isIdle = true;
 isShooting = false;
-isWalkShooting = false;
+isJumping = false;
 
 // Bullet that can be shot
 bulletNum = 0;
-
-var _move
