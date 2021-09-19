@@ -6,7 +6,7 @@ function ScrShot() {
 var move = argument[0];
 
 #region Setting the shooting sprite
-	if(isIdle && fire && !space) {
+	if(isIdle && fire && !isJumping) {
 		bulletNum = 1;
 		isShooting = true;
 		isIdle = false;

@@ -73,8 +73,8 @@ x = x + hsp;
 			} else {
 				sprite_index = idleLeft;	
 			}
+			image_xscale = 1;
 		}
-		image_xscale = 1;
 		vsp = 0;
 	}
 y = y + vsp;

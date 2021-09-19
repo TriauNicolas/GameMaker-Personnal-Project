@@ -9,7 +9,7 @@ var _jumping;
 
 grv = 0.5;
 vsp = 0;
-jumpsp = 9;
+jumpsp = 10;
 var _move;
 
 // Status player
