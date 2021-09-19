@@ -6,12 +6,6 @@ fire = mouse_button == mb_left;
 
 #region Moving
 
-if(space) {
-	isJumping = true;	
-} else {
-	isJumping = false;	
-}
-
 	ScrMoves(spr_IDLELeft, spr_IDLERight, spr_WalkLeft, spr_WalkRight, spr_Jump);
 
 #endregion
