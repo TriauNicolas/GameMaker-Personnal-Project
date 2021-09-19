@@ -7,9 +7,9 @@ hsp = 0;
 walksp = 4;
 var _jumping;
 
-grv = 0.6;
+grv = 0.5;
 vsp = 0;
-jumpsp = 9;
+jumpsp = 10;
 var _move;
 
 // Status player
