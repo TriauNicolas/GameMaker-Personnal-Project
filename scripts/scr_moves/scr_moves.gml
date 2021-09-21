@@ -38,9 +38,10 @@ function ScrMoves(){
 	}
 
 	// Jump + change sprite
-	if(space && place_meeting(x, y + 1, obj_wall)) {
+	if(space && place_meeting(x, y + 1, obj_wall) && !isShooting) {
 		vsp = -jumpsp;
 		isJumping = true;
+		image_xscale = 1;
 		
 		if(sprite_index == idleRight || sprite_index == walkRight) {
 			sprite_index = jump;
@@ -62,7 +63,7 @@ x = x + hsp;
 	// Checking vertical collision
 	if(place_meeting(x, y + vsp, obj_wall)) {
 		show_debug_message("It vertical plateform");
-			while(!place_meeting(x, y + sign(vsp), obj_wall)) {		
+			while(!place_meeting(x, y + sign(vsp), obj_wall)) {
 				y = y + sign(vsp);
 			}
 		isJumping = false;
@@ -78,4 +79,13 @@ x = x + hsp;
 		vsp = 0;
 	}
 y = y + vsp;
+	
+	// Changing direction during jump
+	if(!place_meeting(x, y + 1, obj_wall)) {
+		if(right) {
+			image_xscale = 1;	
+		} else if(left) {
+			image_xscale = -1;
+		}		
+	}
 }

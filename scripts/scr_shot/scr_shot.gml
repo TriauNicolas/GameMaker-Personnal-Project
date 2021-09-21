@@ -6,7 +6,7 @@ function ScrShot() {
 var move = argument[0];
 
 #region Setting the shooting sprite
-	if(isIdle && fire && !isJumping) {
+	if(isIdle && !isJumping && fire) {
 		bulletNum = 1;
 		isShooting = true;
 		isIdle = false;
@@ -98,11 +98,10 @@ function creatingBullet () {
 			creatingBullet();
 		}
 		
-		// End of the animation
+
+		// End of the animation		
 		if(image_index >= image_number - 1) {
 			image_xscale = 1;
-			isIdle = true;
-			isShooting = false;
 			
 			if(move == 0) {
 				if(shootingRight) {
@@ -115,6 +114,9 @@ function creatingBullet () {
 			} else {
 				sprite_index = spr_WalkLeft;	
 			}
+			
+			isIdle = true;
+			isShooting = false;
 		}
 	}
 }
